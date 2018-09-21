@@ -9,6 +9,18 @@ deploy:
   app: tcr-ui
   env: tcr-ui-prod
   bucket_name: elasticbeanstalk-us-east-1-197628141427
+  on:
+    branch: master
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: "$access_key_id"
+  secret_access_key: "$secret_access_key"
+  region: us-east-1
+  app: tcr-ui
+  env: tcr-ui-staging
+  bucket_name: elasticbeanstalk-us-east-1-197628141427
+  on:
+    branch: develop
 env:
   global:
   - secure: LW4Vcetzswq9z6nPNrsxgWgsN4MosGLhLP8zKX3MMuFx/iW2rLxWb9uE1NrCmliJc7cAR3GSKCBylkRgzhziJ25hEiYOmf8BqscPbNADNdSVgyOAf3b5OuEtq8iJ99qCac5gEwu8zqjfeSCiW3b+lDnhEj+4KaPwT8jtfsgV7rRglDQji9B5Dk3wTn3qxFZPaL+/NkjicSfHdlArUp6QrsuaPiqvMOhOMQ6U2MWfv8rqFNHRvEcZjHiLqe11cw6zo6aloVC7swc/fFxrakFpf0PKD/2GqIwmvlmJkis4DGOJM3nAGeY3LaLdEw7f9JXixv2QBc3TNtFn8Z7TMer+oCC4wGWxd5KojiooISpWsbqdhtLFDMJQo3LouXj/+Z4DhGZ5R4TgDTVG8p71Fc4/p+uc8BSXG9L4cYYcaNN8AJbWd3K5grSimC8ih72O7kWT16RkzEGRs73XlM9UQ0x/6IcyosCpEzjkoVRhUIm46jnz76YDhQUcwMjCCzHZZZi+KbNB7xf4KYPra6q6nGKjTfmYOhERR2TtW74DxN23DJEwjXbEnBbtTVWUiZ0sCCwW57siidHZDiQwijqkb3VciQEMEgtHISOvwBYIrI3Y8JUITDLW575haq5lXwVWj/ycuufUa0JvUkA//yIq7Z1LfJCs12VFg9pSpQfb+4EoO5I=
